@@ -3,16 +3,6 @@ import re
 from mcdreforged.handler.impl import ForgeHandler
 from typing_extensions import override
 
-PLUGIN_METADATA = {
-    'id': 'cleanroom_handler',
-    'version': '1.0.0',
-    "name": "CleanRoom Server Handler",
-    "description": "A Server Handler for CleanRoom in Minecraft 1.12.2 on Java21",
-    "author": "Cmmmmmm",
-    "link": "https://github.com/CmmmmmmLau/MCDR_CustomChatFormat",
-    "dependencies": {},
-}
-
 class CleanRoomHandler(ForgeHandler):
     """
     A handler for Cleanroom <https://github.com/CleanroomMC/Cleanroom>__ Minecraft servers.
