@@ -20,11 +20,7 @@ class CleanRoomHandler(ForgeHandler):
         # [09:47:28] [Server thread/INFO] [minecraft/NetHandlerPlayServer]: Cmmmmmm lost connection: Disconnected
         return re.compile(
             r'\[(?P<hour>\d+):(?P<min>\d+):(?P<sec>\d+)]'  # Time
-            r' \[(?P<thread>[^]]+)/(?P<logging>[^]/]+)]'   # Thread name and log level
+            r' \[(?P<thread>[^[]+)/(?P<logging>[^[]+)]'    # Thread name and log level
             r'( \[(.*)?])'                                 # Logger name, could be a empty square bracket
             r': (?P<content>.*)'                           # Output Content
         )
-
-
-def on_load(server, prev_module):
-    server.register_server_handler(CleanRoomHandler())
